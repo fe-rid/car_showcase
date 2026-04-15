@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>APEX MOTORS — Configure</title>
+<meta name="description" content="Build and price your dream car — choose model, exterior color, interior, and get an instant estimate.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Mono:wght@400;700&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body class="page-scrollable">
+
+<!-- Custom Cursor -->
+<div id="cursor"></div>
+<div id="cursor-ring"></div>
+
+<!-- Progress Line -->
+<div id="progress-line"></div>
+
+<!-- Background -->
+<div class="page-bg"></div>
+
+<!-- Corner Brackets -->
+<div class="bracket bracket-tl"></div>
+<div class="bracket bracket-tr"></div>
+<div class="bracket bracket-bl"></div>
+<div class="bracket bracket-br"></div>
+
+<!-- NAV -->
+<nav id="nav" class="nav-solid">
+  <a href="index.html" class="nav-logo">Apex Motors</a>
+  <ul class="nav-links">
+    <li><a href="models.html">Models</a></li>
+    <li><a href="performance.html">Performance</a></li>
+    <li><a href="configure.html" class="active">Configure</a></li>
+    <li><a href="dealers.html">Dealers</a></li>
+  </ul>
+  <div class="nav-right">
+    <a href="index.html" class="btn btn-ghost" style="padding:8px 18px; font-size:9px;">← Home</a>
+  </div>
+</nav>
+
+<!-- PAGE CONTENT -->
+<div class="page-content">
+  <div class="page-header">
+    <span class="page-tag">// Build & Price</span>
+    <h1 class="page-title">Configure</h1>
+    <p class="page-subtitle-text">Select your model, choose your exterior color, and see your dream machine come to life.</p>
+  </div>
+
+  <div class="config-layout">
+    <div class="config-preview">
+      <div class="config-car-img" id="config-car-img" style="background-image:url('assets/lamborghini-miura-goodwood-.jpg')"></div>
+      <div class="config-preview-label">Live Preview — <span id="config-selected-name">Miura SV</span></div>
+    </div>
+    <div class="config-panel">
+      <div class="config-section">
+        <div class="config-section-title">Select Model</div>
+        <div class="config-model-btns">
+          <button class="config-model-btn active" data-model="0">
+            <span>Lamborghini Miura SV</span>
+            <span class="config-price">$3,200,000</span>
+          </button>
+          <button class="config-model-btn" data-model="1">
+            <span>Rolls-Royce Ghost BB</span>
+            <span class="config-price">$382,000</span>
+          </button>
+          <button class="config-model-btn" data-model="2">
+            <span>Ferrari 812 Superfast</span>
+            <span class="config-price">$363,730</span>
+          </button>
+        </div>
+      </div>
+      <div class="config-section">
+        <div class="config-section-title">Exterior Color</div>
+        <div class="config-colors" id="config-colors">
+          <div class="config-color-swatch active" style="background:#1a1a1a" data-color="Nero Noctis" data-price="0" title="Nero Noctis"></div>
+          <div class="config-color-swatch" style="background:#c0392b" data-color="Rosso Corsa" data-price="4500" title="Rosso Corsa"></div>
+          <div class="config-color-swatch" style="background:#f1c40f" data-color="Giallo Modena" data-price="4500" title="Giallo Modena"></div>
+          <div class="config-color-swatch" style="background:#2c3e50" data-color="Blu Monaco" data-price="6200" title="Blu Monaco"></div>
+          <div class="config-color-swatch" style="background:#ecf0f1" data-color="Bianco Avus" data-price="0" title="Bianco Avus"></div>
+          <div class="config-color-swatch" style="background:linear-gradient(135deg,#2c3e50,#3498db)" data-color="Carbon Spec" data-price="12800" title="Carbon Spec"></div>
+        </div>
+      </div>
+      <div class="config-section">
+        <div class="config-section-title">Interior</div>
+        <div class="config-colors" id="config-interior">
+          <div class="config-color-swatch active" style="background:#1a1a1a" data-color="Nero" data-price="0" title="Nero"></div>
+          <div class="config-color-swatch" style="background:#8B4513" data-color="Cuoio" data-price="3800" title="Cuoio"></div>
+          <div class="config-color-swatch" style="background:#800020" data-color="Bordeaux" data-price="5200" title="Bordeaux"></div>
+          <div class="config-color-swatch" style="background:#F5F5DC" data-color="Crema" data-price="3800" title="Crema"></div>
+        </div>
+      </div>
+      <div class="config-summary">
+        <div class="config-total-row">
+          <span class="config-total-label">Estimated Total</span>
+          <span class="config-total-price" id="config-total">$3,200,000</span>
+        </div>
+        <button class="config-cta" id="config-cta-btn">Request Consultation</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Ticker -->
+<div id="ticker">
+  <div class="ticker-inner" id="ticker-inner"></div>
+</div>
+
+<script src="script.js"></script>
+<script>
+(function() {
+  const carData = [
+    { name: 'Miura SV', brand: 'Lamborghini', img: 'assets/lamborghini-miura-goodwood-.jpg', price: 3200000 },
+    { name: 'Ghost BB', brand: 'Rolls-Royce', img: 'assets/5dc357d10eca76b16551ad8710dc92c3.jpg', price: 382000 },
+    { name: '812 Superfast', brand: 'Ferrari', img: 'assets/d489f08f89b9e0dddcf0c1074be62a17 (1).jpg', price: 363730 }
+  ];
+
+  let configModel = 0;
+  let configColorPrice = 0;
+  let configInteriorPrice = 0;
+
+  function updateTotal() {
+    const total = carData[configModel].price + configColorPrice + configInteriorPrice;
+    document.getElementById('config-total').textContent = '$' + total.toLocaleString();
+  }
+
+  // Model select
+  document.querySelectorAll('.config-model-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.config-model-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      configModel = parseInt(btn.dataset.model);
+      document.getElementById('config-car-img').style.backgroundImage = `url('${carData[configModel].img}')`;
+      document.getElementById('config-selected-name').textContent = carData[configModel].name;
+      updateTotal();
+    });
+  });
+
+  // Exterior color
+  document.querySelectorAll('#config-colors .config-color-swatch').forEach(sw => {
+    sw.addEventListener('click', () => {
+      document.querySelectorAll('#config-colors .config-color-swatch').forEach(s => s.classList.remove('active'));
+      sw.classList.add('active');
+      configColorPrice = parseInt(sw.dataset.price || 0);
+      updateTotal();
+    });
+  });
+
+  // Interior color
+  document.querySelectorAll('#config-interior .config-color-swatch').forEach(sw => {
+    sw.addEventListener('click', () => {
+      document.querySelectorAll('#config-interior .config-color-swatch').forEach(s => s.classList.remove('active'));
+      sw.classList.add('active');
+      configInteriorPrice = parseInt(sw.dataset.price || 0);
+      updateTotal();
+    });
+  });
+
+  // CTA button
+  document.getElementById('config-cta-btn').addEventListener('click', () => {
+    const car = carData[configModel];
+    const total = car.price + configColorPrice + configInteriorPrice;
+    alert(`Thank you for your interest in the ${car.brand} ${car.name}!\n\nEstimated Total: $${total.toLocaleString()}\n\nA specialist from Apex Motors will contact you within 24 hours.`);
+  });
+})();
+</script>
+</body>
+</html>

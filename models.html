@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>APEX MOTORS — The Collection</title>
+<meta name="description" content="Explore the Apex Motors collection — Lamborghini Miura SV, Rolls-Royce Ghost Black Badge, and Ferrari 812 Superfast.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Mono:wght@400;700&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body class="page-scrollable">
+
+<!-- Custom Cursor -->
+<div id="cursor"></div>
+<div id="cursor-ring"></div>
+
+<!-- Progress Line -->
+<div id="progress-line"></div>
+
+<!-- Background -->
+<div class="page-bg"></div>
+
+<!-- Corner Brackets -->
+<div class="bracket bracket-tl"></div>
+<div class="bracket bracket-tr"></div>
+<div class="bracket bracket-bl"></div>
+<div class="bracket bracket-br"></div>
+
+<!-- NAV -->
+<nav id="nav" class="nav-solid">
+  <a href="index.html" class="nav-logo">Apex Motors</a>
+  <ul class="nav-links">
+    <li><a href="models.html" class="active">Models</a></li>
+    <li><a href="performance.html">Performance</a></li>
+    <li><a href="configure.html">Configure</a></li>
+    <li><a href="dealers.html">Dealers</a></li>
+  </ul>
+  <div class="nav-right">
+    <a href="index.html" class="btn btn-ghost" style="padding:8px 18px; font-size:9px;">← Home</a>
+  </div>
+</nav>
+
+<!-- PAGE CONTENT -->
+<div class="page-content">
+  <div class="page-header">
+    <span class="page-tag">// Our Fleet</span>
+    <h1 class="page-title">The Collection</h1>
+    <p class="page-subtitle-text">Three icons. Three eras. One obsession with automotive perfection. Explore each model in our curated heritage and modern lineup.</p>
+  </div>
+
+  <div class="models-grid">
+    <!-- Lamborghini Miura SV -->
+    <a href="index.html" class="model-card">
+      <div class="model-card-img" style="background-image:url('assets/lamborghini-miura-goodwood-.jpg')"></div>
+      <div class="model-card-body">
+        <div class="model-card-brand">Lamborghini</div>
+        <div class="model-card-name">Miura SV</div>
+        <div class="model-card-desc">The original supercar — mid-engine, transverse V12, and Gandini's timeless design. A 1966 icon that started it all.</div>
+        <div class="model-card-specs">
+          <div class="model-spec"><div class="model-spec-val">385</div><div class="model-spec-label">Horsepower</div></div>
+          <div class="model-spec"><div class="model-spec-val">6.7s</div><div class="model-spec-label">0–60 mph</div></div>
+          <div class="model-spec"><div class="model-spec-val">171</div><div class="model-spec-label">Top mph</div></div>
+          <div class="model-spec"><div class="model-spec-val">V12</div><div class="model-spec-label">Engine</div></div>
+        </div>
+      </div>
+    </a>
+
+    <!-- Rolls-Royce Ghost Black Badge -->
+    <a href="index.html" class="model-card">
+      <div class="model-card-img" style="background-image:url('assets/5dc357d10eca76b16551ad8710dc92c3.jpg')"></div>
+      <div class="model-card-body">
+        <div class="model-card-brand">Rolls-Royce</div>
+        <div class="model-card-name">Ghost Black Badge</div>
+        <div class="model-card-desc">The dark alter ego. A blacked-out Spirit of Ecstasy and a 6.75L twin-turbo V12 wrapped in bespoke, uncompromising luxury.</div>
+        <div class="model-card-specs">
+          <div class="model-spec"><div class="model-spec-val">563</div><div class="model-spec-label">Horsepower</div></div>
+          <div class="model-spec"><div class="model-spec-val">4.8s</div><div class="model-spec-label">0–60 mph</div></div>
+          <div class="model-spec"><div class="model-spec-val">155</div><div class="model-spec-label">Top mph</div></div>
+          <div class="model-spec"><div class="model-spec-val">V12</div><div class="model-spec-label">Engine</div></div>
+        </div>
+      </div>
+    </a>
+
+    <!-- Ferrari 812 Superfast -->
+    <a href="index.html" class="model-card">
+      <div class="model-card-img" style="background-image:url('assets/d489f08f89b9e0dddcf0c1074be62a17 (1).jpg')"></div>
+      <div class="model-card-body">
+        <div class="model-card-brand">Ferrari</div>
+        <div class="model-card-name">812 Superfast</div>
+        <div class="model-card-desc">The most powerful naturally aspirated road car. 6.5L V12 screaming to 9,000 rpm — 789 hp of Maranello fury.</div>
+        <div class="model-card-specs">
+          <div class="model-spec"><div class="model-spec-val">789</div><div class="model-spec-label">Horsepower</div></div>
+          <div class="model-spec"><div class="model-spec-val">2.9s</div><div class="model-spec-label">0–60 mph</div></div>
+          <div class="model-spec"><div class="model-spec-val">211</div><div class="model-spec-label">Top mph</div></div>
+          <div class="model-spec"><div class="model-spec-val">V12</div><div class="model-spec-label">Engine</div></div>
+        </div>
+      </div>
+    </a>
+  </div>
+</div>
+
+<!-- Ticker -->
+<div id="ticker">
+  <div class="ticker-inner" id="ticker-inner"></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

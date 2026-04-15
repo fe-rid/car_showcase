@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>APEX MOTORS — Luxury & Performance</title>
+<meta name="description" content="Apex Motors — Luxury & Performance Automotive Showcase featuring Lamborghini Miura SV, Rolls-Royce Ghost Black Badge, and Ferrari 812 Superfast.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Mono:wght@400;700&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div id="cursor"></div>
+<div id="cursor-ring"></div>
+<div id="progress-line"></div>
+
+<div class="bracket bracket-tl"></div>
+<div class="bracket bracket-tr"></div>
+<div class="bracket bracket-bl"></div>
+<div class="bracket bracket-br"></div>
+
+<!-- NAV -->
+<nav id="nav">
+  <a href="index.html" class="nav-logo">Apex Motors</a>
+  <ul class="nav-links">
+    <li><a href="models.html">Models</a></li>
+    <li><a href="performance.html">Performance</a></li>
+    <li><a href="configure.html">Configure</a></li>
+    <li><a href="dealers.html">Dealers</a></li>
+  </ul>
+  <div class="nav-right">
+    <div class="nav-slide-counter"><span class="cur" id="counter-cur">01</span> / <span>03</span></div>
+  </div>
+</nav>
+
+<!-- BG TRACK -->
+<div id="bg-track">
+  <div class="bg-slide">
+    <div class="bg-img" id="bg0" style="background-image:url('assets/lamborghini-miura-goodwood-.jpg')"></div>
+  </div>
+  <div class="bg-slide">
+    <div class="bg-img" id="bg1" style="background-image:url('assets/5dc357d10eca76b16551ad8710dc92c3.jpg')"></div>
+  </div>
+  <div class="bg-slide">
+    <div class="bg-img" id="bg2" style="background-image:url('assets/d489f08f89b9e0dddcf0c1074be62a17 (1).jpg')"></div>
+  </div>
+</div>
+
+<!-- SLIDE CONTENT -->
+<div id="content-area">
+
+  <!-- SLIDE 1 — Lamborghini Miura SV -->
+  <div class="slide-content" id="sc0">
+    <div class="left-block">
+      <div class="badge"><span class="badge-dot"></span><span class="badge-text">1966 Icon — Heritage Collection</span></div>
+      <div class="headline-wrap">
+        <span class="hl-brand">Lamborghini</span>
+        <span class="hl-solid">Miura SV</span>
+        <span class="hl-gradient">V12 Legend</span>
+      </div>
+      <p class="subtitle">The car that invented the supercar. Marcello Gandini's masterpiece — a transverse V12, mid-engine icon that rewrote automotive history forever.</p>
+      <div class="cta-row">
+        <a href="models.html" class="btn btn-primary">Discover Legacy</a>
+        <button class="btn btn-film" onclick="openVideo(0)">
+          <span class="play-icon"><svg viewBox="0 0 8 10"><polygon points="0,0 8,5 0,10"/></svg></span>
+          Watch Film
+        </button>
+      </div>
+    </div>
+    <div class="right-block">
+      <div class="stats-card">
+        <div class="stats-card-label">Performance Specs</div>
+        <div class="stat-row"><span class="stat-value">6.7</span><span class="stat-unit">s</span><span class="stat-label">0–60 mph</span></div>
+        <div class="stat-row"><span class="stat-value">385</span><span class="stat-unit">hp</span><span class="stat-label">Peak Power</span></div>
+        <div class="stat-row"><span class="stat-value">171</span><span class="stat-unit">mph</span><span class="stat-label">Top Speed</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SLIDE 2 — Rolls-Royce Ghost Black Badge -->
+  <div class="slide-content" id="sc1">
+    <div class="left-block">
+      <div class="badge"><span class="badge-dot"></span><span class="badge-text">British Luxury — Black Badge Edition</span></div>
+      <div class="headline-wrap">
+        <span class="hl-brand">Rolls-Royce</span>
+        <span class="hl-solid">Ghost</span>
+        <span class="hl-gradient">Black Badge</span>
+      </div>
+      <p class="subtitle">The alter ego of Rolls-Royce. Ghost Black Badge strips away convention — a twin-turbo 6.75L V12, blacked-out Spirit of Ecstasy, and 563 hp of silent, commanding authority.</p>
+      <div class="cta-row">
+        <a href="configure.html" class="btn btn-primary">Commission Yours</a>
+        <button class="btn btn-film" onclick="openVideo(1)">
+          <span class="play-icon"><svg viewBox="0 0 8 10"><polygon points="0,0 8,5 0,10"/></svg></span>
+          Watch Film
+        </button>
+      </div>
+    </div>
+    <div class="right-block">
+      <div class="stats-card">
+        <div class="stats-card-label">Performance Specs</div>
+        <div class="stat-row"><span class="stat-value">4.8</span><span class="stat-unit">s</span><span class="stat-label">0–60 mph</span></div>
+        <div class="stat-row"><span class="stat-value">563</span><span class="stat-unit">hp</span><span class="stat-label">Peak Power</span></div>
+        <div class="stat-row"><span class="stat-value">155</span><span class="stat-unit">mph</span><span class="stat-label">Top Speed</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SLIDE 3 — Ferrari 812 Superfast -->
+  <div class="slide-content" id="sc2">
+    <div class="left-block">
+      <div class="badge"><span class="badge-dot"></span><span class="badge-text">Ferrari Maranello — Naturally Aspirated V12</span></div>
+      <div class="headline-wrap">
+        <span class="hl-solid">Ferrari</span>
+        <span class="hl-outline">812</span>
+        <span class="hl-gradient">Superfast</span>
+      </div>
+      <p class="subtitle">The world's most powerful naturally aspirated production car. A 6.5L V12 screaming to 9,000 rpm — 789 hp of pure Maranello fury with zero compromise.</p>
+      <div class="cta-row">
+        <a href="configure.html" class="btn btn-primary">Configure Yours</a>
+        <button class="btn btn-film" onclick="openVideo(2)">
+          <span class="play-icon"><svg viewBox="0 0 8 10"><polygon points="0,0 8,5 0,10"/></svg></span>
+          Watch Film
+        </button>
+      </div>
+    </div>
+    <div class="right-block">
+      <div class="stats-card">
+        <div class="stats-card-label">Performance Specs</div>
+        <div class="stat-row"><span class="stat-value">2.9</span><span class="stat-unit">s</span><span class="stat-label">0–60 mph</span></div>
+        <div class="stat-row"><span class="stat-value">789</span><span class="stat-unit">hp</span><span class="stat-label">Peak Power</span></div>
+        <div class="stat-row"><span class="stat-value">211</span><span class="stat-unit">mph</span><span class="stat-label">Top Speed</span></div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- DOTS -->
+<div id="slide-dots">
+  <div class="dot active" data-idx="0"></div>
+  <div class="dot" data-idx="1"></div>
+  <div class="dot" data-idx="2"></div>
+</div>
+
+<!-- ARROWS -->
+<div id="arrow-hints">
+  <div class="arrow-btn" id="btn-prev"><svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg></div>
+  <div class="arrow-btn" id="btn-next"><svg viewBox="0 0 24 24"><polyline points="9 6 15 12 9 18"/></svg></div>
+</div>
+
+<!-- TICKER -->
+<div id="ticker">
+  <div class="ticker-inner" id="ticker-inner"></div>
+</div>
+
+<!-- VIDEO MODAL -->
+<div id="video-modal" onclick="if(event.target===this)closeVideo()">
+  <div class="vm-inner">
+    <div class="vm-header">
+      <div>
+        <div class="vm-title" id="vm-title">Lamborghini Miura SV</div>
+        <div class="vm-sub" id="vm-sub">Heritage Film — 1966 V12 Icon</div>
+      </div>
+      <button class="vm-close" onclick="closeVideo()">
+        <svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+    <div class="vm-body">
+      <iframe id="vm-iframe" src="" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <!-- Shown when YouTube blocks embedding -->
+      <div class="vm-fallback" id="vm-fallback">
+        <div class="vm-fallback-title">Video Unavailable for Embedding</div>
+        <div class="vm-fallback-desc">This video's uploader has disabled embedding. You can still watch it directly on YouTube.</div>
+        <a class="vm-fallback-link" id="vm-yt-link" href="#" target="_blank" rel="noopener">▶ Watch on YouTube</a>
+      </div>
+    </div>
+    <div class="vm-footer">
+      <p>Apex Motors Heritage Film Series</p>
+      <span>ESC to close</span>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+<script src="home.js"></script>
+</body>
+</html>
