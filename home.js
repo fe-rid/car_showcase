@@ -14,19 +14,19 @@ const VIDEOS = [
   {
     title : 'Lamborghini Miura SV',
     sub   : 'Heritage Film — 1966 V12 Icon',
-    id    : 'pXHXlI9yU0w',                          // youtu.be/pXHXlI9yU0w
-    watch : 'https://youtu.be/pXHXlI9yU0w'
+    id    : 'pXHXlI9yU0w',
+    watch : 'https://youtu.be/pXHXlI9yU0w?si=DFsgLMf3ZFD8XQSH'
   },
   {
     title : 'Rolls-Royce Ghost Black Badge',
     sub   : 'Official Film — The Dark Side of Luxury',
-    id    : 'w2yFwbYITMg',                          // youtu.be/w2yFwbYITMg
-    watch : 'https://youtu.be/w2yFwbYITMg'
+    id    : 'w2yFwbYITMg',
+    watch : 'https://youtu.be/w2yFwbYITMg?si=TT4Y0M8x0CctbouX'
   },
   {
     title : 'Ferrari 812 Superfast',
     sub   : 'Official Film — The V12 Masterpiece',
-    id    : 'gEuR6DmGZcA',                          // youtu.be/gEuR6DmGZcA
+    id    : 'gEuR6DmGZcA',
     watch : 'https://youtu.be/gEuR6DmGZcA'
   }
 ];
@@ -45,12 +45,14 @@ const bgImgs    = [document.getElementById('bg0'), document.getElementById('bg1'
 
 /* ── INIT ────────────────────────────────────────────── */
 scEls.forEach((el, i) => {
+  el.classList.toggle('active', i === 0);
   el.style.transition = 'none';
   el.style.transform  = i === 0 ? 'translateY(0)' : 'translateY(60px)';
   el.style.opacity    = i === 0 ? '1'             : '0';
 });
 setPalette(0);
 setProgress(0);
+setDots(0);
 
 /* ── PALETTE ─────────────────────────────────────────── */
 function setPalette(idx) {
@@ -82,6 +84,7 @@ function goTo(idx) {
   setPalette(idx);
   setProgress(idx);
   setDots(idx);
+  scEls.forEach((el, i) => el.classList.toggle('active', i === idx));
   counter.textContent = String(idx + 1).padStart(2, '0');
 
   const out = scEls[prev];
@@ -113,10 +116,11 @@ document.addEventListener('keydown', e => {
 let wc = false;
 document.addEventListener('wheel', e => {
   if (isModalOpen() || wc) return;
+  if (Math.abs(e.deltaY) < 20) return; // ignore small scrolls
   wc = true;
   goTo(e.deltaY > 0 ? current + 1 : current - 1);
-  setTimeout(() => wc = false, 1000);
-}, { passive: true });
+  setTimeout(() => wc = false, 800);
+}, { passive: false });
 
 let sx = 0, sy = 0;
 document.addEventListener('touchstart', e => { sx = e.touches[0].clientX; sy = e.touches[0].clientY; }, { passive: true });

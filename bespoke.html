@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>APEX MOTORS — Bespoke Commission</title>
+<meta name="description" content="Enter the world of Rolls-Royce Bespoke. Commission your Ghost Black Badge — an expression of your unique identity through the ultimate luxury craftsmanship.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Mono:wght@400;700&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+  .bespoke-hero {
+    height: 70vh;
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(8,8,12,1)), url('assets/5dc357d10eca76b16551ad8710dc92c3.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: flex-end;
+    padding: 60px;
+    position: relative;
+  }
+  .bespoke-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    padding: 60px;
+  }
+  .b-text-block {
+    font-size: 18px;
+    line-height: 1.8;
+    color: rgba(255,255,255,0.7);
+  }
+  .b-text-block h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 48px;
+    color: #fff;
+    margin-bottom: 24px;
+    letter-spacing: 2px;
+  }
+  .feature-list {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+  .feature-item {
+    border-left: 1px solid var(--accent);
+    padding-left: 20px;
+  }
+  .feature-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 20px;
+    color: #fff;
+    margin-bottom: 8px;
+  }
+  .feature-desc {
+    font-size: 13px;
+    color: rgba(255,255,255,0.4);
+  }
+  
+  @media(max-width: 900px) {
+    .bespoke-grid { grid-template-columns: 1fr; padding: 40px 24px; }
+    .bespoke-hero { padding: 40px 24px; height: 50vh; }
+  }
+</style>
+</head>
+<body class="page-scrollable">
+
+<!-- Custom Cursor -->
+<div id="cursor"></div>
+<div id="cursor-ring"></div>
+
+<!-- Progress Line -->
+<div id="progress-line"></div>
+
+<!-- Background -->
+<div class="page-bg"></div>
+
+<!-- Corner Brackets -->
+<div class="bracket bracket-tl"></div>
+<div class="bracket bracket-tr"></div>
+<div class="bracket bracket-bl"></div>
+<div class="bracket bracket-br"></div>
+
+<!-- NAV -->
+<nav id="nav" class="nav-solid">
+  <a href="index.html" class="nav-logo">Apex Motors</a>
+  <ul class="nav-links">
+    <li><a href="models.html">Models</a></li>
+    <li><a href="performance.html">Performance</a></li>
+    <li><a href="configure.html" class="active">Configure</a></li>
+    <li><a href="dealers.html">Dealers</a></li>
+  </ul>
+  <div class="nav-right">
+    <a href="index.html" class="btn btn-ghost" style="padding:8px 18px; font-size:9px;">← Home</a>
+  </div>
+</nav>
+
+<!-- HERO SECTION -->
+<div class="bespoke-hero">
+  <div>
+    <span class="page-tag" style="animation: none;">// Bespoke Atelier</span>
+    <h1 class="page-title" style="animation: none;">Commission Yours</h1>
+    <p class="page-subtitle-text" style="animation: none;">Your Ghost Black Badge. A portrait of your inner ambition.</p>
+  </div>
+</div>
+
+<!-- CONTENT SECTION -->
+<div class="bespoke-grid">
+  <div class="b-text-block">
+    <h2>The Masterpiece of Choice</h2>
+    <p>Rolls-Royce Bespoke is the heart of Goodwood. It is the ability to personalize every detail of your motor car, from the hue of the exterior to the texture of the starlight headliner. With Ghost Black Badge, the canvas is darker, bolder, and more personal than ever.</p>
+    <p style="margin-top: 20px;">Our consultants work with you to choose from over 44,000 standard colors — or create a bespoke shade based on a meaningful object from your life. The possibilities are truly infinite.</p>
+    
+    <div style="margin-top: 40px;">
+      <a href="configure.html" class="btn btn-primary">Start Configuration</a>
+    </div>
+  </div>
+  
+  <div>
+    <div class="feature-list">
+      <div class="feature-item">
+        <div class="feature-title">Starlight Headliner</div>
+        <div class="feature-desc">1,340 individual fiber optic cables sewn into the leather to recreate your favorite constellation.</div>
+      </div>
+      <div class="feature-item">
+        <div class="feature-title">Coachline</div>
+        <div class="feature-desc">A single, 6-meter long line hand-painted by a master artisan using a specific squirrel-hair brush.</div>
+      </div>
+      <div class="feature-item">
+        <div class="feature-title">Bespoke Audio</div>
+        <div class="feature-desc">18 speakers specifically tuned to the unique acoustic signature of your interior configuration.</div>
+      </div>
+      <div class="feature-item">
+        <div class="feature-title">Spirit of Ecstasy</div>
+        <div class="feature-desc">Finished in high-gloss dark chrome for the Black Badge, or plated in 24-carat gold upon request.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Ticker -->
+<div id="ticker">
+  <div class="ticker-inner" id="ticker-inner"></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

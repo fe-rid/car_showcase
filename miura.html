@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>APEX MOTORS — Miura SV Heritage</title>
+<meta name="description" content="The Lamborghini Miura SV — the car that invented the supercar. Explore the heritage, engineering, and timeless design of a 1966 legend.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Mono:wght@400;700&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+  .heritage-hero {
+    height: 70vh;
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(8,8,12,1)), url('assets/lamborghini-miura-goodwood-.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: flex-end;
+    padding: 60px;
+    position: relative;
+  }
+  .heritage-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    padding: 60px;
+  }
+  .h-text-block {
+    font-size: 18px;
+    line-height: 1.8;
+    color: rgba(255,255,255,0.7);
+  }
+  .h-text-block h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 48px;
+    color: #fff;
+    margin-bottom: 24px;
+    letter-spacing: 2px;
+  }
+  .specs-list {
+    list-style: none;
+    margin-top: 40px;
+  }
+  .specs-list li {
+    display: flex;
+    justify-content: space-between;
+    padding: 18px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    font-family: 'Space Mono', monospace;
+    font-size: 13px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.5);
+  }
+  .specs-list li span { color: var(--accent); font-weight: 700; }
+  
+  @media(max-width: 900px) {
+    .heritage-grid { grid-template-columns: 1fr; padding: 40px 24px; }
+    .heritage-hero { padding: 40px 24px; height: 50vh; }
+  }
+</style>
+</head>
+<body class="page-scrollable">
+
+<!-- Custom Cursor -->
+<div id="cursor"></div>
+<div id="cursor-ring"></div>
+
+<!-- Progress Line -->
+<div id="progress-line"></div>
+
+<!-- Background -->
+<div class="page-bg"></div>
+
+<!-- Corner Brackets -->
+<div class="bracket bracket-tl"></div>
+<div class="bracket bracket-tr"></div>
+<div class="bracket bracket-bl"></div>
+<div class="bracket bracket-br"></div>
+
+<!-- NAV -->
+<nav id="nav" class="nav-solid">
+  <a href="index.html" class="nav-logo">Apex Motors</a>
+  <ul class="nav-links">
+    <li><a href="models.html" class="active">Models</a></li>
+    <li><a href="performance.html">Performance</a></li>
+    <li><a href="configure.html">Configure</a></li>
+    <li><a href="dealers.html">Dealers</a></li>
+  </ul>
+  <div class="nav-right">
+    <a href="index.html" class="btn btn-ghost" style="padding:8px 18px; font-size:9px;">← Home</a>
+  </div>
+</nav>
+
+<!-- HERO SECTION -->
+<div class="heritage-hero">
+  <div>
+    <span class="page-tag" style="animation: none;">// Heritage Archive</span>
+    <h1 class="page-title" style="animation: none;">Discover the Legacy</h1>
+    <p class="page-subtitle-text" style="animation: none;">Lamborghini Miura SV — The Genesis of the Modern Supercar.</p>
+  </div>
+</div>
+
+<!-- CONTENT SECTION -->
+<div class="heritage-grid">
+  <div class="h-text-block">
+    <h2>A Transverse Masterpiece</h2>
+    <p>In 1966, the Miura didn't just change the game; it invented it. Before the Miura, performance cars were front-engined grand tourers. Lamborghini's engineers, working in their spare time, envisioned a car with a transverse-mounted V12 engine positioned directly behind the driver.</p>
+    <p style="margin-top: 20px;">The result was Marcello Gandini's breathtaking design, featuring "eyelashes" on the headlights and a profile that remains one of the most beautiful in automotive history. The SV (Spinto Veloce) was the ultimate evolution, featuring flared rear arches and improved performance.</p>
+    
+    <div style="margin-top: 40px;">
+      <a href="https://youtu.be/pXHXlI9yU0w?si=DFsgLMf3ZFD8XQSH" target="_blank" class="btn btn-primary">Watch The Documentary</a>
+    </div>
+  </div>
+  
+  <div>
+    <h3 style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: var(--accent); margin-bottom: 20px;">Technical Specifications</h3>
+    <ul class="specs-list">
+      <li>Production Years <span>1966–1973</span></li>
+      <li>Engine <span>3.9L Naturally Aspirated V12</span></li>
+      <li>Power <span>385 HP @ 7,850 RPM</span></li>
+      <li>Torque <span>400 NM @ 5,750 RPM</span></li>
+      <li>Transmission <span>5-Speed Manual</span></li>
+      <li>0–100 km/h <span>6.7 Seconds</span></li>
+      <li>Top Speed <span>280 km/h (174 mph)</span></li>
+      <li>Weight <span>1,298 kg</span></li>
+    </ul>
+  </div>
+</div>
+
+<!-- Ticker -->
+<div id="ticker">
+  <div class="ticker-inner" id="ticker-inner"></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
